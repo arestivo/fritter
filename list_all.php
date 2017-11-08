@@ -1,5 +1,5 @@
 <?php
-  $conn = new PDO('pgsql:host=dbm.fe.up.pt;dbname=siem', 'siem', 'siem');
+  $conn = new PDO('pgsql:host=HOSTNAME;dbname=USERNAME', 'USERNAME', 'PASSWORD');
   $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
   $stmt = $conn->prepare('SELECT * FROM tweets JOIN users USING (username) ORDER BY time DESC');
