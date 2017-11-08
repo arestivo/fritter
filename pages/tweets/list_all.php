@@ -1,17 +1,15 @@
 <?php
-  $conn = new PDO('pgsql:host=dbm.fe.up.pt;dbname=siem', 'siem', 'siem');
-  $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+  include ('../../config/init.php');
+  include ($BASE_DIR . 'database/tweets.php');
 
-  $stmt = $conn->prepare('SELECT * FROM tweets JOIN users USING (username) ORDER BY time DESC');
-  $stmt->execute();
-  $tweets = $stmt->fetchAll();
+  $tweets = getAllTweets();
 ?>
 <!DOCTYPE html>
 <html>
   <head>
     <title>Example Twitter</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="<?=$BASE_URL?>css/style.css">
   </head>
   <body>
     <section id="tweets">
