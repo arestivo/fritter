@@ -1,29 +1,23 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Example Twitter</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="{$BASE_URL}css/style.css">
-  </head>
-  <body>
-    <section id="tweets">
+{include file='common/header.tpl'}
 
-      <header>
-        <h2>Tweets</h2>
-      </header>
+<section id="tweets">
 
-      {foreach $tweets as $tweet}
-      <article class="tweet">
-        <header>
-          <span class="realname">{$tweet.realname}</span>
-          <a href="#" class="username">@{$tweet.username}</a>
-          <span class="time">{$tweet.time}</span>
-        </header>
+  <header>
+    <h2>Tweets</h2>
+  </header>
 
-        <p>{$tweet.text}</p>
-      </article>
-      {/foreach}
+  {foreach $tweets as $tweet}
+  <article class="tweet">
+    <header>
+      <span class="realname">{$tweet.realname}</span>
+      <a href="#" class="username">@{$tweet.username}</a>
+      <span class="time">{$tweet.time}</span>
+    </header>
 
-    </section>
-  </body>
-</html>
+    <p>{$tweet.text}</p>
+  </article>
+  {/foreach}
+
+</section>
+
+{include file='common/footer.tpl'}
