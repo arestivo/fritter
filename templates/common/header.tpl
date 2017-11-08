@@ -9,4 +9,5 @@
 
     <header>
       <h1><a href="{$BASE_URL}">Fritter</a></h1>
+      <a href="{$BASE_URL}pages/users/register.php">Register</a>
     </header>
