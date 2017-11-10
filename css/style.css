@@ -60,7 +60,7 @@ body > header a {
 }
 
 .tweet header .time:before {
-  content: '\00B7  ';?username=mike
+  content: '\00B7  ';
 }
 
 #register {
@@ -85,23 +85,4 @@ body > header a {
   background-color: #1DA1F2;
   color: white;
   border-radius: 2em;
-}
-
-#messages {
-  width: 40em;
-}
-#messages {
-  width: 40em;
-  margin: 0 auto;
-}
-
-#messages div {
-  padding: 1em;
-  margin-top: 1em;
-  border-radius: 2em;
-}
-
-#messages .error {
-  background-color: #F99;
-  color: #333;
 }
