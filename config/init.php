@@ -1,4 +1,7 @@
 <?php
+  session_set_cookie_params(3600, 'PATH');
+  session_start();
+
   $BASE_DIR = 'REPLACE ME';
   $BASE_URL = 'REPLACE ME';
 
@@ -10,4 +13,9 @@
   $smarty->template_dir = $BASE_DIR . 'templates/';
   $smarty->compile_dir = $BASE_DIR . 'templates_c/';
   $smarty->assign('BASE_URL', $BASE_URL);
+
+  if (isset($_SESSION['error_messages'])) {
+    $smarty->assign('ERROR_MESSAGES', $_SESSION['error_messages']);
+    unset($_SESSION['error_messages']);
+  }
 ?>

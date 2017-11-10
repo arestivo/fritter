@@ -2,8 +2,12 @@
   include ('../../config/init.php');
   include ($BASE_DIR . 'database/tweets.php');
 
-  if (!isset($_GET['username'])) die('username missing');
-  
+  if (!$_GET['username']) {
+    $_SESSION['error_messages'][] = 'Undefined username';
+    header("Location: $BASE_URL");
+    exit;
+  }
+
   $username = $_GET['username'];
 
   $tweets = getUserTweets($username);
