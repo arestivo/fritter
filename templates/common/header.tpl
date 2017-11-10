@@ -13,11 +13,3 @@
         <a href="{$BASE_URL}pages/users/register.php">Register</a>
       </div>
     </header>
-
-    <section id="messages">
-      {if isset($ERROR_MESSAGES)}
-        {foreach $ERROR_MESSAGES as $error}
-          <div class="error">{$error}</div>
-        {/foreach}
-      {/if}
-    </section>
