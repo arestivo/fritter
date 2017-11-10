@@ -60,7 +60,7 @@ body > header a {
 }
 
 .tweet header .time:before {
-  content: '\00B7  ';?username=mike
+  content: '\00B7  ';
 }
 
 #register {
