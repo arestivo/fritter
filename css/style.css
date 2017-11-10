@@ -67,6 +67,31 @@ body > header .username {
   display: none;
 }
 
+#tweet_form {
+  background-color: #E8F4FB;
+  padding: 5px;
+}
+
+#tweet_form form {
+  width: 100%;
+  display: flex;
+}
+
+#tweet_form textarea{
+  border: none;
+  flex-grow: 1;
+  margin: 1em;
+  padding: 1em;
+}
+
+#tweet_form input {
+  background-color: #1DA1F2;
+  color: white;
+  border: none;
+  margin: 1em;
+  padding: 1em;
+  border-radius: 1em;
+}
 .tweet {
   padding: 1em;
   background-color: #FFF;

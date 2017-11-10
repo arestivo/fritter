@@ -6,6 +6,15 @@
     <h2>Tweets</h2>
   </header>
 
+  {if isset($USERNAME)}
+  <section id="tweet_form">
+    <form action="{$BASE_URL}actions/tweets/tweet.php" method="post">
+      <textarea name="tweet" placeholder="Say something"></textarea>
+      <input type="submit" value="Tweet">
+    </form>
+  </section>
+  {/if}
+
   {foreach $tweets as $tweet}
   <article class="tweet">
     <header>
