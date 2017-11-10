@@ -15,6 +15,8 @@
 
   try {
     createUser($realname, $username, $password);
+    $_SESSION['success_messages'][] = 'User registered successfully';
+    header("Location: $BASE_URL");
   } catch (PDOException $e) {
 
     if (strpos($e->getMessage(), 'users_pkey') !== false)
