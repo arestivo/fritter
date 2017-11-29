@@ -4,6 +4,8 @@
     <title>Twitter Example</title>
     <meta charset='utf-8'>
     <link rel="stylesheet" href="{$BASE_URL}/css/style.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="{$BASE_URL}javascript/main.js"></script>
   </head>
   <body>
 
@@ -20,12 +22,12 @@
     <section id="messages">
       {if isset($ERROR_MESSAGES)}
         {foreach $ERROR_MESSAGES as $error}
-          <div class="error">{$error}</div>
+          <div class="error">{$error} <a class="close" href="#">&#215;</a></div>
         {/foreach}
       {/if}
       {if isset($SUCCESS_MESSAGES)}
         {foreach $SUCCESS_MESSAGES as $success}
-          <div class="success">{$success}</div>
+          <div class="success">{$success} <a class="close" href="#">&#215;</a></div>
         {/foreach}
       {/if}
     </section>

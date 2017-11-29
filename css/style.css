@@ -105,12 +105,20 @@ body > header .username {
 .tweet header a{
   text-decoration: none;
   color: #657786;
+}.close {
+  float: right;
+  text-decoration: none;
+  color: #666;
 }
 
 .tweet header .time:before {
   content: '\00B7  ';
 }
-
+.close {
+  float: right;
+  text-decoration: none;
+  color: #666;
+}
 #register {
   width: 20em;
   margin: 0 auto;
@@ -121,7 +129,11 @@ body > header .username {
 }
 
 #register input {
-  display: block;
+  display: blo.close {
+  float: right;
+  text-decoration: none;
+  color: #666;
+}ck;
   border: 0;
   margin: 1em;
   padding: 1em;
@@ -156,5 +168,11 @@ body > header .username {
 
 #messages .success {
   background-color: #9F9;
+  color: #333;
+}
+
+#messages .close {
+  float: right;
+  text-decoration: none;
   color: #333;
 }
