@@ -14,7 +14,7 @@
   $password = $_POST['password'];
 
   try {
-    createUser($realname, $username, $password);
+    createUser($username, $realname, $password);
   } catch (PDOException $e) {
 
     if (strpos($e->getMessage(), 'users_pkey') !== false)
