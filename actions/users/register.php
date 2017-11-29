@@ -14,7 +14,7 @@
   $password = $_POST['password'];
 
   try {
-    createUser($realname, $username, $password);
+    createUser($username, $realname, $password);
     $_SESSION['success_messages'][] = 'User registered successfully';
     header("Location: $BASE_URL");
   } catch (PDOException $e) {
