@@ -92,10 +92,15 @@ body > header .username {
   padding: 1em;
   border-radius: 1em;
 }
+
 .tweet {
   padding: 1em;
   background-color: #FFF;
   border-bottom: 1px solid #E6ECf0;
+}
+
+.tweet .id{
+  display: none;
 }
 
 .tweet header .realname{
@@ -175,4 +180,17 @@ body > header .username {
   float: right;
   text-decoration: none;
   color: #333;
+}
+
+#new_tweets {
+  display: none;
+  background-color: #B8ECEF;
+  text-align: center;
+  padding: 10px;
+  color: #333;
+}
+
+#new_tweets a{
+  color: blue;
+  text-decoration: none;
 }

@@ -27,5 +27,25 @@
     $stmt->execute(array($username, $tweet));
   }
 
+  function getTweetCountAfter($id) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT COUNT(*) AS count
+                            FROM tweets
+                            WHERE id > ?");
+    $stmt->execute(array($id));
+    $result = $stmt->fetch();
+    return $result['count'];
+  }
+
+  function getTweetsAfter($id) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT *
+                            FROM tweets JOIN
+                                 users USING(username)
+                            WHERE id > ?
+                            ORDER BY time");
+    $stmt->execute(array($id));
+    return $stmt->fetchAll();
+  }
 
 ?>
