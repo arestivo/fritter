@@ -1,11 +1,11 @@
 <?php
-  session_set_cookie_params(3600, '/~arestivo/fritter/');
+  session_set_cookie_params(3600, 'PATH');
   session_start();
 
-  $BASE_DIR = '/home/arestivo/public_html/fritter/';
-  $BASE_URL = 'http://localhost/~arestivo/fritter/';
+  $BASE_DIR = 'REPLACE ME';
+  $BASE_URL = 'REPLACE ME';
 
-  $conn = new PDO('pgsql:host=dbm.fe.up.pt;dbname=siem', 'siem', 'siem');
+  $conn = new PDO('pgsql:host=HOSTNAME;dbname=USERNAME', 'USERNAME', 'PASSWORD');
   $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
