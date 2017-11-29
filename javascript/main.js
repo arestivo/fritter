@@ -1,4 +1,4 @@
-let BASE_URL = 'http://localhost/~arestivo/fritter/';
+let BASE_URL = 'REPLACE ME';
 
 $(document).ready(function() {
   initMessageClosers();
